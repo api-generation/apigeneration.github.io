@@ -1,0 +1,10 @@
+sections:
+  "Section 1":
+    body: This is **section** 1 body text
+    image: edit-mtt-config.png
+  "Section 2":
+    body: This is **section** 2 body text
+    image: github-confirm-access.png
+  "Section 3":
+    body: This is **section** 3 body text
+    image: library-repository.png

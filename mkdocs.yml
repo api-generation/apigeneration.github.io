@@ -30,5 +30,15 @@ theme:
 # Organise your pages here. The files must exist inside the /docs folder.
 nav:
   - Home: index.md
+  - Learn:
+    - MTT Overview: learn/mtt-overview/index.md
+    - Projects: learn/projects/index.md
+    - Models: learn/models/index.md
+    - Loaders: learn/loaders/index.md
+    - Standard Generators: learn/standard-generators/index.md
+    - New Generators: learn/new-generators/index.md
+    - Running MTT: learn/running-mtt/index.md
+    - Example Projects: learn/example-projects/index.md
+  - Try MTT: try-mtt/index.md
 #  - Contact Us: contact.md
 

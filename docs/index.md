@@ -19,3 +19,5 @@ This provides the following benefits:
 - **Incorporate best practice:** The generators incorporate best practice and any local standards. Defining and implementing these rules is done once; resulting in rigour and consistency  across all the generated artefacts.
 - **Democratise the development process:** The use of standard UML diagrams, which are quick to learn how to read, enable a wide set of skills and experience to be involved in the model's development and review. This leads to more robust and enduring models and hence generated outputs.
 - **Provide technology independence:** Using a model to generating specifications, rather than code, allows greater freedom to choose the technology to implement APIs, etc. For example, there are many open-source tools that take an API specification as input and generate implementation code in a particular programming language or framework.
+
+**Elliot was here!**

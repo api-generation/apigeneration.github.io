@@ -39,7 +39,7 @@ MTT supports two types of project:
 
 Projects can also include dependencies on other projects. This allows a catalogue of models to be developed and reused. For example, many projects could depend on a set of core-types such as : Address, Lat/Long, Name, UUID, etc
 
-See [Projects](/learn/projects) for more details.
+See [Projects](learn/projects/index.md) for more details.
 
 ### Deployment
 
@@ -49,11 +49,16 @@ The MTT can be run in two ways:
 
 **Docker container**: This is ideal where, for business or security reasons, project models and generated artefacts need to be stored locally. In this case the tool can be deployed on local infrastructure as a Docker container.
 
-See [Running the MTT](/learn/running-mtt) for more details.
+See [Running the MTT](learn/running-mtt/index.md) for more details.
 
 ### Extensibility
 
 The tool's structure and internal information model is designed to allow new generators, for other standards or custom artefacts, to be quickly developed and integrated.
 Whilst Sparx Enterprise Architect (EA) is the default UML modelling tool new loaders, for alternative UML & RDF modelling tools, can be easily developed & integrated. The tool's internal model means that all generators will automatically work with any new loaders.
 
-See [Developing New Generators](/learn/new-generators) for more details.
+See [Developing New Generators](learn/new-generators/index.md) for more details.
+
+<!-- To relative paths: -->
+[Projects](learn/projects/index.md)
+[Running MTT](learn/running-mtt/index.md)
+[New Generators](learn/new-generators/index.md)

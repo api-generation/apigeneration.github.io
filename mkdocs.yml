@@ -1,44 +1,63 @@
-site_name: "API Generation"
-site_url: "https://apigeneration.tech/" # Update with your URL
-repo_url: "https://github.com"
+site_name: "API Generation Docs"
+site_url: "https://apigeneration.tech/"
+repo_url: "https://github.com/your-org/your-repo" # Update with actual repo
 
 theme:
   name: material
   logo: assets/logo.png
   favicon: assets/favicon.png
-  palette: 
-    # Optional styling: Automatically switches between light and dark mode
+  palette:
+    # Light Mode (Matches MTT Manager app background)
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: white
+      accent: blue
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
+    # Dark Mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: grey
+      accent: blue
       toggle:
         icon: material/weather-night
         name: Switch to light mode
-  features:
-    - navigation.tabs      # Top-level horizontal menu tabs
-    - navigation.sections  # Left sidebar grouping collapse
-    - search.suggest       # Smart search bar autocompletion
 
-# Organise your pages here. The files must exist inside the /docs folder.
+  features:
+    - navigation.tabs          # Top horizontal navbar
+    - navigation.sections      # Sidebar sections
+    - navigation.top           # Back-to-top button
+    - navigation.instant       # Fast SPA transitions
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+extra_css:
+  - stylesheets/mtt-style.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
 nav:
   - Home: index.md
   - Learn:
-    - MTT Overview: learn/mtt-overview/index.md
-    - Projects: learn/projects/index.md
-    - Models: learn/models/index.md
-    - Loaders: learn/loaders/index.md
-    - Standard Generators: learn/standard-generators/index.md
-    - New Generators: learn/new-generators/index.md
-    - Running MTT: learn/running-mtt/index.md
-    - Example Projects: learn/example-projects/index.md
+      - Overview: learn/mtt-overview/index.md
+      - Projects: learn/projects/index.md
+      - Models: learn/models/index.md
+      - Loaders: learn/loaders/index.md
+      - Standard Generators: learn/standard-generators/index.md
+      - New Generators: learn/new-generators/index.md
+      - Running MTT: learn/running-mtt/index.md
+      - Example Projects: learn/example-projects/index.md
+  - FAQ: faq/index.md
   - Try MTT: try-mtt/index.md
-#  - Contact Us: contact.md
-

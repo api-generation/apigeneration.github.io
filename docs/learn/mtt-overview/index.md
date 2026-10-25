@@ -1,24 +1,81 @@
-### Tool Structure
+# MTT Overview
 
-The figure below shows the key components of the MTT:
+Learn about the core architecture, internal model pipeline, and deployment models of the **Model Transform Tools (MTT)**.
 
-- **Model loaders**. The default modelling tool is Sparx EA and the provided loader for its exported XML format. Any modelling tool that can export an information-model can be used and loaded into the MTT internal model, via a custom model loader. 
-- **Internal model**. The internal model provides the secret-sauce that enables two key aspects which separate the MTT from traditional code generators:
-  - Generators can be easily developed, using a range of widely-used programming languages and approaches.
-  - Supports dependencies between information models, allowing a catalogue of models to be developed and re-used across projects. 
-- **Output generators**. Rather than developing models of a particular API or message standard, The MTT works on business information models that are agnostic to the output formats. It is the generators that provide the intelligent mapping from model to specific output. It is this approach that also enables relevant design best-practice and any house standards to be built into the generators.
+---
 
-<div class=" text-center">
-<figure class="figure">
-  <img class = "p-2 border border-dark" src="assets/mtt-overview.png" alt="The MTT structure and process" width="600"/>
-  <figcaption class="figure-caption"><span class="lead">The MTT structure and process</span></figcaption>
-</figure>
+## Tool Structure
+
+The diagram below illustrates the key structural components of the MTT transformation pipeline:
+
+![The MTT structure and process](assets/mtt-overview.png)
+
+*Figure 1: High-level MTT structure and data transformation pipeline*
+
+---
+
+## Key Components
+
+<div class="grid cards" markdown>
+
+-   **Model Loaders**
+
+    ---
+
+    * **Default Tool:** Sparx Enterprise Architect (EA) via exported XML.
+    * **Custom Loaders:** Ingest any structured information model into the internal metadata format.
+
+-   **Internal Model**
+
+    ---
+
+    * **Multi-Language Generators:** Build custom generators easily using standard programming languages.
+    * **Model Dependencies:** Re-use a shared catalog of information models across distinct projects.
+
+-   **Output Generators**
+
+    ---
+
+    * **Agnostic Domain Models:** Operates on business domain models agnostic to specific outputs.
+    * **Intelligent Mapping:** Translates models into OpenAPI, GraphQL, Protobuf, and Markdown documentation.
+    * **Built-in Best Practices:** Enforces architectural guidelines and local organizational rules.
+
+-   **CI/CD & Automation**
+
+    ---
+
+    * **Automated Artifacts:** Re-generate specifications automatically on every pull request or commit.
+    * **GitHub Actions:** Native action integration for publishing versioned specifications.
+    * **Docker Uniformity:** Identical execution pipeline across local developer tools and cloud builds.
+
 </div>
 
-### Deployment
+---
 
-The MTT can be run either:
+## Deployment Options
 
-- Using the web service [API Generation MTT](https://mtt.apigeneration.tech), for GitHub based projects (or running the [example projects](#example-projects)). In this case it can also be integrated with GitHub Actions as part of CD/CI workflow.
-- On local infrastructure, as a Docker container.  In this case the MTT requires read/write access to  project repositories that are mapped as Docker Volumes.
+Select the deployment model that matches your infrastructure requirements:
 
+=== "Cloud / GitHub Web Service"
+
+    ### Managed Web Instance
+    Run transformations directly via the managed web service at [mtt.apigeneration.tech](https://mtt.apigeneration.tech).
+
+    * **GitHub Repositories:** Connect public or private GitHub repositories for automated transformations.
+    * **CI/CD Integration:** Integrate directly into GitHub Actions workflows to auto-generate specifications on push or pull request.
+    * **Sample Walkthroughs:** Test drive transformations immediately using pre-configured [Example Projects](../example-projects/).
+
+=== "Local Infrastructure (Docker)"
+
+    ### On-Premises / Local Container
+    Deploy MTT inside your local network or developer environment using the official Docker container.
+
+    * **Data Privacy:** Keep domain models completely on-premises.
+    * **Docker Volumes:** Mount local file systems and project repositories directly to Docker volumes for read/write access.
+    * **CLI Execution:** Run fast local transformations during active model development.
+
+---
+
+!!! tip "Next Steps"
+    * Explore how projects and configuration files are structured in [Project Structure](../projects/).
+    * Check out step-by-step instructions for running transformations in [Running the Tool](../running-mtt/).

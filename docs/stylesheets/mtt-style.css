@@ -1,0 +1,64 @@
+/* ==========================================================================
+   MTT Manager - Native Material for MkDocs Minimal Theme
+   ========================================================================== */
+
+:root {
+  --mtt-blue: #0d6efd;
+  --mtt-blue-hover: #0b5ed7;
+  --mtt-border: #e9ecef;
+  --mtt-radius: 12px;
+}
+
+/* Header Navbar matching MTT Manager */
+.md-header {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border-bottom: 1px solid var(--mtt-border);
+  box-shadow: none !important;
+}
+
+.md-header__title,
+.md-header__button,
+.md-nav__link {
+  color: #1e293b !important;
+}
+
+.md-tabs {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid var(--mtt-border);
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--mtt-blue) !important;
+}
+
+/* Native Grid Cards (Matches MTT App Cards) */
+.grid.cards > ul > li {
+  background: #ffffff !important;
+  border: 1px solid var(--mtt-border) !important;
+  border-radius: var(--mtt-radius) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+  padding: 1.25rem !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.grid.cards > ul > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Primary Blue Action Buttons */
+.md-typeset .md-button--primary {
+  background-color: var(--mtt-blue) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(13, 110, 253, 0.25);
+}
+
+.md-typeset .md-button--primary:hover {
+  background-color: var(--mtt-blue-hover) !important;
+}

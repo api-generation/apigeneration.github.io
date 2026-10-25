@@ -1,23 +1,97 @@
-# Welcome to API Generation
+# Learn About MTT
 
-<div class="feature-icon d-inline-flex align-items-center justify-content-center">
-<img src="assets/benefits.jpg" width="50"></img>
-<h2 class="display-6 fw-bold text-body-emphasis lh-1 ms-2 mb-1">Benefits</h2>
+> *"A picture paints a thousand words."*  
+> — Fred R. Barnard
+
+Learn how to use **Model Transform Tools (MTT)** to generate API specifications, message schemas, and documentation from pictorial representations of your business information.
+
+---
+
+## Getting Started
+
+<div class="grid cards" markdown>
+
+-   :material-information-outline:{ .lg .middle } **MTT Overview**
+
+    ---
+
+    Understand the core architecture, transformation engine concepts, and execution pipeline.
+
+    [:octicons-arrow-right-24: Read Overview](learn/mtt-overview/)
+
+-   :material-folder-outline:{ .lg .middle } **Project Structure**
+
+    ---
+
+    Explore repository layout, configuration files, and source control organization.
+
+    [:octicons-arrow-right-24: Explore Layout](learn/projects/)
+
+-   :material-play-circle-outline:{ .lg .middle } **Running the Tool**
+
+    ---
+
+    Execute transformations locally, via command line, or inside automated GitHub Actions.
+
+    [:octicons-arrow-right-24: View Guide](learn/running-mtt/)
+
+-   :material-auto-fix:{ .lg .middle } **Example Projects**
+
+    ---
+
+    Browse live sample models and their generated OpenAPI specs, GraphQL schemas, and docs.
+
+    [:octicons-arrow-right-24: Browse Examples](learn/example-projects/)
+
 </div>
 
-Exposing APIs (Application Programming Interfaces) for your business services offers **significant strategic, operational, and technical benefits**.
+---
 
-But designing, implementing and maintaining usable and robust APIs is hard and expensive.
+## Technical References
 
-API Generation's Model Transform Tools (MTT) solves these problems and significantly reduces costs and improves quality. It does this by generating API specifications and a range of other key development products from a graphical representation of the information you want to share.
+<div class="grid cards" markdown>
 
-This provides the following benefits:
+-   :material-cube-outline:{ .md .middle } **UML & Models**
 
-- **Define once, generate many:** Defining the business information in a structured but output agnostic model allows the generation of many outputs. The most common outputs are API specifications, such as OpenAPI, GraphQL and Protobuf. However, there are many other possibilities such as documentation using the Markdown standard, custom data standards, etc.
-- **Improve efficiency:** The define-once, generate-many principle means that, by only having to invest in producing and maintaining the information models, API and other **development costs and times are significantly reduced**.</br>
-  The example [Library](learn/example-projects) project generates more that 7,500 lines of OpenAPI specification, over 450 lines of GraphQL specification and a complete set of consistent Markdown documentation.
-- **Incorporate best practice:** The generators incorporate best practice and any local standards. Defining and implementing these rules is done once; resulting in rigour and consistency  across all the generated artefacts.
-- **Democratise the development process:** The use of standard UML diagrams, which are quick to learn how to read, enable a wide set of skills and experience to be involved in the model's development and review. This leads to more robust and enduring models and hence generated outputs.
-- **Provide technology independence:** Using a model to generating specifications, rather than code, allows greater freedom to choose the technology to implement APIs, etc. For example, there are many open-source tools that take an API specification as input and generate implementation code in a particular programming language or framework.
+    Guidelines for modeling domain entities, attributes, and relationships.
 
-**Elliot was here!**
+    [View Specs →](learn/models/)
+
+-   :material-file-import-outline:{ .md .middle } **Model Loaders**
+
+    How graphical diagrams are ingested and parsed into internal metadata.
+
+    [View Loaders →](learn/loaders/)
+
+-   :material-cog-outline:{ .md .middle } **Generators**
+
+    Standards for generating OpenAPI 3.0, GraphQL, Protobuf, and Markdown outputs.
+
+    [View Generators →](learn/standard-generators/)
+
+</div>
+
+---
+
+## Frequently Asked Questions
+
+??? question "Why can't I just use Generative AI to design my APIs?"
+
+    While Generative AI can assist in drafting initial snippets, enterprise API generation requires **100% deterministic precision, strict governance, and repeatable standards**.
+
+    * **Zero Hallucinations:** Generative models can introduce subtle field mismatches or non-standard syntax. MTT guarantees exact schema compliance every time.
+    * **Single Source of Truth:** Updating a core visual model automatically propagates breaking changes cleanly across OpenAPI, GraphQL, Protobuf, and documentation.
+    * **Governance & Compliance:** Architectural rules are built directly into MTT generators rather than relying on prompt engineering.
+
+??? question "How does MTT integrate with existing GitHub repositories?"
+
+    MTT uses standard repository structures for models and configs. You can execute transformations on local file stores or automate artifact generation directly within GitHub Actions pipelines.
+
+[:octicons-question-24: View Full FAQ Page](faq/){ .md-button }
+
+---
+
+!!! tip "Ready to run a transformation?"
+    Return to the main MTT Manager web application to select your local or remote project and execute transforms.
+
+    [Launch MTT Tool →](https://apigeneration.tech/try-mtt){ .md-button .md-button--primary }

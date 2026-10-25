@@ -1,98 +1,111 @@
+# Try Model Transform Tools (MTT)
 
+Test drive the **Model Transform Tools (MTT)** to evaluate how graphical domain models transform into production-ready API specifications, schemas, and static documentation sites.
 
+---
 
+## Evaluation Options
 
-## Options to try MTT out. A Test
+Select one of two pathways to evaluate MTT based on your workflow needs:
 
-There are two options for seeing what MTT can do for you:
+<div class="grid cards" markdown>
 
-1) Browse the [example projects](/learn/projects)  and the outputs generated from the models. These projects include everything you need to get a feeling for both the information models used as input to the MTT and the range and quality of the generated outputs. 
-2) Follow the instructions to enable the MTT as a trial GitHub app. Note you may need to register for an API Generation’s account if you haven’t already got one. This will enable you to run MTT on information models in your own GitHub account & commit the generated outputs  to your GitHub account on a trial basis. The trial models can have a maximum of seven classes, API Generation’s core-types library can be the only dependency and each registered user can run the MTT a maximum of 5 times. To start creating your own model library & generating outputs from it, sign up at GitHub marketplace. 
+-   **Option 1: Explore Example Projects**
 
-## Use MTT as a GitHub App
+    ---
 
-To set up MTT, as a GitHub App, and generate outputs complete the following steps:
+    Browse pre-configured sample models (`Library`, `Property Ownership`, `Personal Details`, `Core Types`) along with their auto-generated OpenAPI, GraphQL, and Markdown outputs.
 
-### Add MTT as a GitHub App
+    [:octicons-arrow-right-24: View Example Projects](../learn/example-projects/)
 
-Follow the <a href="https://github.com/apps/model-transform-tool/installations/new" target="_blank">MTT Installation</a> link to start the GitHub App installation process. 
+-   **Option 2: Install GitHub App Trial**
 
-This starts with a page to choose which GitHub account to install MTT onto. The example below shows both personal and organisation accounts being available.
+    ---
 
-<div class=" text-center">
-<figure class="figure ">
-  <img class="p-2 border border-dark" src="assets/github-install-mtt.png" alt="Install MTT onto a GitHub account" width="600"/>
-  <figcaption class="figure-caption"><span class="lead">Install MTT onto a GitHub account</span></figcaption>
-</figure>
+    Connect the MTT GitHub App to your account to execute transformations on your own models and automatically commit generated artifacts back to your repositories.
+
+    [:octicons-arrow-right-24: Install GitHub App](https://github.com/apps/model-transform-tool/installations/new){ target="_blank" }
+
 </div>
 
-Selecting an account provides control of which repositories MTT can access and shows which permissions MTT requires. Selecting Install 
+---
 
-<div class=" text-center">
-<figure class="figure ">
-  <img class="p-2 border border-dark" src="assets/github-install-select-repos.png" alt="Install MTT on GitHub" width="600"/>
-  <figcaption class="figure-caption"><span class="lead">Select repositories and permissions</span></figcaption>
-</figure>
-</div>
+!!! info "Trial Account Capabilities & Limits"
+    The trial version allows you to test real-world transformations directly in your GitHub repositories. Trial accounts include the following parameters:
 
-If 2FA is enabled on the GitHub account (recommended) then verify that MTT should be allowed access to the repos.
+    * **Model Complexity:** Maximum of **7 classes** per information model.
+    * **Dependencies:** Model references are limited to the official `core-types` library.
+    * **Execution Quota:** Up to **5 transformation runs** per registered user.
+    * **Production Access:** To remove limits and create custom model libraries, subscribe via the [GitHub Marketplace](https://github.com/marketplace).
 
-<div class=" text-center">
-<figure class="figure ">
-  <img class="p-2 border border-dark" src="assets/github-confirm-access.png" alt="Confirm acess to Repos" width="400"/>
-  <figcaption class="figure-caption"><span class="lead">Confirm acess to Repos</span></figcaption>
-</figure>
-</div>
+---
 
-If everything has gone correctly then the final screen summarises the MTT installation and provides options to disable or remove the MTT App.
+## Setting Up MTT as a GitHub App
 
-<div class=" text-center">
-<figure class="figure ">
-  <img class="p-2 border border-dark" src="assets/github-mtt-installed.png" alt="MTT intalled on GitHub account" width="600"/>
-  <figcaption class="figure-caption"><span class="lead">MTT intalled on GitHub account</span></figcaption>
-</figure>
-</div>
+Follow these steps to authorize the MTT GitHub App and configure repository permissions:
 
-### Run MTT on example project
+### Step 1: Initiate Installation
+Navigate to the [MTT GitHub App Installation Page](https://github.com/apps/model-transform-tool/installations/new){ target="_blank" } and select the target GitHub personal account or organization where you plan to host your models.
 
-To run MTT on an example project, in your GitHub repository follow the steps below:
+![Install MTT onto a GitHub account](assets/github-install-mtt.png)
+*Figure 1: Account selection prompt for MTT installation.*
 
-Go to the <a href="https://github.com/API-Generation/library" target="_blank">Library repository</a>. This should display the Library project files.
+### Step 2: Configure Repository Permissions
+Grant MTT access to either **All repositories** or select **Only select repositories**. Review the requested read/write permissions required for model parsing and committing generated outputs.
 
-<div class=" text-center">
-<figure class="figure ">
-  <img class="p-2 border border-dark" src="assets/library-repository.png" alt="Library example project repo" width="800"/>
-  <figcaption class="figure-caption"><span class="lead">Library example project repo</span></figcaption>
-</figure>
-</div>
+![Select repositories and permissions](assets/github-install-select-repos.png)
+*Figure 2: Configuring repository access controls and permissions.*
 
-Either 'Fork' or download a zip of the library repo. If you've used a download then the files will need to be uploaded to your own repository.
+### Step 3: Verify Two-Factor Authentication (2FA)
+If 2FA is enabled on your GitHub account, confirm authentication to complete the authorization handshake.
 
-In GitHub, edit the **mtt-config.yaml** file and make the changes shown below and commit the updates.
-<div class=" text-center">
-<figure class="figure ">
-  <img class="p-2 border border-dark" src="assets/edit-mtt-config.png" alt="Edit mtt-config.yaml" width="800"/>
-  <figcaption class="figure-caption"><span class="lead">Edit mtt-config.yaml</span></figcaption>
-</figure>
-</div>
+![Confirm access to repositories](assets/github-confirm-access.png)
 
-Go to the [MTT home page](https://mtt.apigeneration.tech) which should display the the page below.
-<div class=" text-center">
-<figure class="figure ">
-  <img class="p-2 border border-dark" src="assets/mtt-home.png" alt="Library example project repo" width="800"/>
-  <figcaption class="figure-caption"><span class="lead">MTT Home page</span></figcaption>
-</figure>
-</div>
-Click on 'Select Project' under GitHub Projects and it should show the page below.
+*Figure 3: Two-factor authentication verification step.*
 
-<div class=" text-center">
-<figure class="figure ">
-  <img class="p-2 border border-dark" src="assets/mtt-github-projects.png" alt="Select project and generators" width="800"/>
-  <figcaption class="figure-caption"><span class="lead">Select project and generators</span></figcaption>
-</figure>
-</div>
+### Step 4: Installation Confirmation
+Upon completion, GitHub displays the active installation status along with options to configure repository access, disable, or uninstall the app.
 
-Check the generators you want to run and once the MTT generators have completed a run summary page should be displayed with links to the outputs committed to GitHub.
+![MTT installed on GitHub account](assets/github-mtt-installed.png)
+*Figure 4: Confirmed MTT GitHub App installation dashboard.*
 
-**Note:** If you check MKDocs then a large number of files are generated and written to GitHub. This can take several minutes so please be patient; it's saving you a lot of work.
+---
 
+## Executing a Transformation Pipeline
+
+Once the GitHub App is installed, test the transformation pipeline using the official **Library** sample repository:
+
+### 1. Fork the Sample Repository
+Navigate to the official [API-Generation / Library Repository](https://github.com/API-Generation/library){ target="_blank" } and create a **Fork** in your GitHub account (or download and push the contents to a new repository in your account).
+
+![Library example project repo](assets/library-repository.png)
+*Figure 5: Official Library sample model repository on GitHub.*
+
+### 2. Configure Project Execution Rules
+In your repository fork, edit `mtt-config.yaml` to specify target generation outputs, active model loaders, and branch commit rules. Commit and push your updates.
+
+![Edit mtt-config.yaml](assets/edit-mtt-config.png)
+*Figure 6: Customizing runtime settings in mtt-config.yaml.*
+
+### 3. Open MTT Manager Portal
+Launch the [MTT Manager Workspace](https://mtt.apigeneration.tech){ target="_blank" }. Select **GitHub Projects** to fetch your connected repositories.
+
+![MTT Home Page](assets/mtt-home.png)
+*Figure 7: MTT Manager web application launchpad.*
+
+### 4. Select Project and Run Generators
+Select your target repository from the dropdown menu, check the boxes for the desired output generators (e.g., OpenAPI, GraphQL, Protobuf, MkDocs), and click **Run Generation**.
+
+![Select project and generators](assets/mtt-github-projects.png)
+*Figure 8: Triggering output generators for a GitHub project.*
+
+---
+
+!!! warning "Documentation Build Times"
+    When enabling the **MkDocs Generator**, MTT compiles complete multi-page documentation suites and writes a large file tree directly to your GitHub repository. This process may take **2–3 minutes** to complete.
+
+---
+
+!!! tip "Next Steps"
+    * Review repository file structures in [Project Structure](../learn/projects/).
+    * Explore runtime output summaries in [Running the Tool](../learn/running-mtt/).

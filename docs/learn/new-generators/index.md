@@ -1,16 +1,34 @@
-#### Developing New Generators
+# Developing New Generators
 
-As described in [MTT Overview](/learn/mtt-overview), a core design principle of the MTT Internal Model is to make adding new Generators, flexible, quick and easy.
+As described in the [MTT Overview](/learn/mtt-overview), a core design principle of the **Model Transform Tools (MTT)** is to make adding and customizing Generators flexible, quick, and easy.
 
-However, creating a new Generator does require some key information to be available as described and illustrated below. The figure aims to bring out two key points, using the OpenAPI and Reversed standards as examples:
+---
 
-1. **Dependencies between standards**. As shown, the OpenAPI standard and the Reversed standard depend on the [JSON Schema Standard](https://json-schema.org/l) and the [JSON Standard](https://www.json.org/json-en.html) for their syntax.
-2. **Generators must to conform to all relevant standards**. As shown, both the OpenAPI and Reversed standards depend on the lower-level JSON and JSON-Schema standard, for the format (syntax) of the generated files, but it is the higher-level OpenAPI and Reversed standards that define the structure (semantics) of what the generators must produce. 
+## Generator Dependencies
 
-<div class="text-center">
-    <figure class="figure">
-        <img class=" p-2 border border-dark" src="assets/generator-dependencies.png"
-             alt="Generator Dependencies" width="800"/>
-        <figcaption class="figure-caption"><span class="lead">Generator Dependencies</span></figcaption>
-    </figure>
-</div>
+Creating a new Generator requires aligning with both high-level semantic specifications and underlying syntax formats. The relationship below illustrates how target standards build upon one another:
+
+![Generator Dependencies](assets/generator-dependencies.png)
+
+*Figure 1: Relationship between low-level syntax formats and high-level schema semantics.*
+
+---
+
+## Architectural Principles
+
+When developing or tailoring a generator, keep these two key structural points in mind:
+
+### 1. Dependencies Between Standards
+Higher-level specifications are not built in a vacuum—they rely on standard foundational formats for their syntax:
+* **The API & Schema Layers**: Both the **OpenAPI standard** and custom **Reversed standard** rely on the **[JSON Schema Standard](https://json-schema.org/)** to establish object validation, types, and parameters.
+* **The Base Serialization Layer**: Underlying everything, both JSON Schema and OpenAPI are serialized as valid **[JSON](https://www.json.org/)** (or YAML), meaning your generator must adhere to strict base-level formatting.
+
+### 2. Double Conformance (Syntax vs. Semantics)
+Your generator must validate and satisfy rules on both layers:
+* **Format (Syntax)**: Generates valid file formats complying with JSON / JSON Schema rules.
+* **Structure (Semantics)**: Conforms to the higher-level specifications (like OpenAPI routes, parameters, and info blocks or Reversed micro-formats) to establish what the data actually represents.
+
+---
+
+!!! tip "Getting Started with Custom Development"
+    Ready to write a new loader or map models to another target format? Ensure your custom scripts output standard syntax before applying specific enterprise semantics.

@@ -1,31 +1,63 @@
-## Projects
+# Project Structure
 
-Projects are where the key inputs and outputs for the MTT are held. These are:
+Projects are where the key inputs, configurations, and output artifacts for the **Model Transform Tools (MTT)** are stored.
 
-- **The exported Information Model**. The UML, or other, definition of the information types and relationships that is to be used as the requirements for the generation process. The library.xml file in the figure below.
+---
 
-- **The mtt-config file**. Which defines project-specific configuration information that is required for the MTT to run. For example: which loader to use, which generators are applicable to this  project, any inter-project dependencies, etc.
+## Folder & File Layout
 
-- **The config folder**. Any project-specific loader or generator configuration. If many projects use common configuration files then these can be defined once and referenced from many projects mtt-config files.
+The diagram below illustrates the standard file directory layout used across MTT projects:
 
-- **The generated folder**. Where the generated files are written. Each projects mtt-config can define a different folder structure if needed. The MTT will create the folder structure as specified in the mtt-config file so does not need to be created manually.
+![Project Folder Structure](assets/project-folder-structure.png)
 
-- **Other files and folders**. The files and folders discussed above are either required or generated. However, other files and folders can be stored in the same repository.  As shown below, the Sparx EA published html filles are stored in the model folder [Library model](https://mtt.apigeneration.tech/repo-static/library/model/index.htm) and the generated markdown files are run through the [MkDocs](https://squidfunk.github.io/mkdocs-material/) tool to generate a complete model documentation website [Library documentation](https://mtt.apigeneration.tech/repo-static/library/site/index.html)
+*Figure 1: Standard MTT project repository structure*
 
+---
 
-<div class=" text-center">
-<figure class="figure ">
-  <img class="p-2 border border-dark" src="assets/project-folder-structure.png" alt="Project Folder Structure" width="400"/>
-  <figcaption class="figure-caption"><span class="lead">Project Folder Structure</span></figcaption>
-</figure>
-</div>
+## Core Components
 
-This file structure and file contents are the same whether the project is hosted on GitHub or locally.
+- **Exported Information Model**  
+  The UML or domain definition containing the information types, relationships, and attributes used as input for generation (e.g., `library.xml` in the example above).
 
-### GitHub Projects
+- **`mtt-config` File**  
+  The primary configuration file specifying project-specific runtime settings, such as which model loader to execute, active output generators, and inter-project catalog dependencies.
 
-MTT has a tight integration with projects stored in GitHub repositories and will manage retrieving the input files and storing and committing and output back to GitHub. Consequently, to run the MTT on a GitHub project requires the user to have a  GitHub account and for the MTT to be registered as a GitHub application by the user/organisation. MTT can also be invoked directly from GitHub, using Actions, as part of a CD/CI workflow.
+- **`config/` Folder**  
+  Holds project-specific loader or generator rules. Common configuration files shared across multiple projects can be defined once and referenced inside individual `mtt-config` files.
 
-### Local Projects
+- **`generated/` Folder**  
+  The destination directory where generated specs, schemas, and documentation are written. Folder structures are defined within `mtt-config` and created automatically by MTT during execution.
 
-Local projects can be stored anywhere on a file system but it is recommended that a simple structure, similar to GitHub, is used with a repo-base folder and all MTT projects located under that. Unlike with GitHub repositories, maintaining version control through Git or similar, is a manual process and not managed by the MTT
+- **Additional Files & Assets**  
+  Repositories can store supplementary files alongside core MTT inputs. For example:
+    * Published Sparx EA HTML models stored under `model/` ([View Library Model](https://mtt.apigeneration.tech/repo-static/library/model/index.htm)).
+    * Markdown documentation built via MkDocs into static sites ([View Library Documentation](https://mtt.apigeneration.tech/repo-static/library/site/index.html)).
+
+---
+
+## Hosting Environments
+
+The directory structure and configuration files remain identical whether hosted in GitHub repositories or on local file systems. Select your hosting model below:
+
+=== "GitHub Projects"
+
+    ### Managed Version Control Integration
+    MTT provides native integration with GitHub repositories to streamline retrieving inputs and committing generated artifacts.
+
+    * **Application Authorization:** Requires MTT to be registered as a GitHub Application for your account or organization.
+    * **Automated CI/CD:** Can be invoked directly within GitHub Actions pipelines as part of automated build workflows.
+    * **Automatic Commits:** Generated specifications are committed and pushed back to your target repository automatically.
+
+=== "Local Projects"
+
+    ### On-Premises File System
+    Local projects can be stored anywhere on a local file system, though using a structured repository base (e.g., `repo-base/`) is recommended.
+
+    * **Local Execution:** Managed through the local Docker container interface.
+    * **Manual Version Control:** Unlike GitHub-hosted projects, version control via Git must be managed manually by the user.
+    * **Docker Volume Mounts:** Requires read/write access to mapped directory volumes.
+
+---
+
+!!! tip "Explore Examples"
+    Want to see a real-world repository layout in action? Check out our pre-configured sample models in [Example Projects](../example-projects/).

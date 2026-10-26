@@ -80,6 +80,7 @@ Find answers to common questions about **Model Transform Tools (MTT)**, supporte
 
 ---
 
-!!! tip "Need Further Assistance?"
-    * Learn how project configurations are structured in [Project Structure](../projects/).
-    * Step through execution workflows in [Running the Tool](../running-mtt/).
+!!! info "Need Further Assistance?"
+    Have a question about your project models or need help getting started with trial access? Reach out to our team directly.
+
+    [:octicons-mail-24: Get in Touch via Contact Form](https://mtt.apigeneration.tech/contact){ .md-button .md-button--primary target="_blank" }

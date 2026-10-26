@@ -1,6 +1,6 @@
 site_name: "API Generation Docs"
 site_url: "https://apigeneration.tech/"
-repo_url: "https://github.com/your-org/your-repo" # Update with actual repo
+repo_url: "https://github.com/your-org/your-repo" # Update with your actual repo
 
 theme:
   name: material
@@ -18,7 +18,6 @@ theme:
       scheme: slate
       primary: grey
       accent: blue
-
 
   features:
     - navigation.tabs          # Top horizontal navbar
@@ -57,3 +56,13 @@ nav:
       - Example Projects: learn/example-projects/index.md
   - FAQ: faq/index.md
   - Try MTT: try-mtt/index.md
+
+# Fixed: Top-level root key
+extra:
+  social:
+    - icon: fontawesome/solid/envelope
+      name: Contact Us
+      link: https://mtt.apigeneration.tech/contact
+    - icon: fontawesome/brands/github
+      name: GitHub Repository
+      link: https://github.com/API-Generation

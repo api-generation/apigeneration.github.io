@@ -91,6 +91,8 @@ Learn how to use **Model Transform Tools (MTT)** to generate API specifications,
 
 ---
 
+---
+
 !!! tip "Ready to run a transformation?"
     Return to the main MTT Manager web application to select your local or remote project and execute transforms.
 

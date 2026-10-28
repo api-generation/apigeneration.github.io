@@ -37,7 +37,7 @@ MTT provides several pre-built generators out of the box, categorized by output 
 
 ## Developing New Generators
 
-As detailed in the [MTT Overview](../mtt-overview/), the core architecture of the MTT Internal Model is designed to make creating custom generators fast, flexible, and language-agnostic.
+As detailed in the [MTT Overview](../mtt-overview/index.md), the core architecture of the MTT Internal Model is designed to make creating custom generators fast, flexible, and language-agnostic.
 
 When building a new generator, it is essential to understand how target specifications depend on underlying syntax standards:
 
@@ -64,5 +64,5 @@ When building a new generator, it is essential to understand how target specific
 ---
 
 !!! tip "Next Steps"
-    * Check how generator rules are specified in [Project Structure](../projects/).
-    * Learn how to trigger generators locally or via CI/CD in [Running the Tool](../running-mtt/).
+    * Check how generator rules are specified in [Project Structure](../projects/index.md).
+    * Learn how to trigger generators locally or via CI/CD in [Running the Tool](../running-mtt/index.md).

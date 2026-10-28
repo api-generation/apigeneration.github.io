@@ -16,7 +16,7 @@ Select one of two pathways to evaluate MTT based on your workflow needs:
 
     Browse pre-configured sample models (`Library`, `Property Ownership`, `Personal Details`, `Core Types`) along with their auto-generated OpenAPI, GraphQL, and Markdown outputs.
 
-    [:octicons-arrow-right-24: View Example Projects](../learn/example-projects/)
+    [:octicons-arrow-right-24: View Example Projects](../learn/example-projects/index.md)
 
 -   **Option 2: Install GitHub App Trial**
 
@@ -107,5 +107,5 @@ Select your target repository from the dropdown menu, check the boxes for the de
 ---
 
 !!! tip "Next Steps"
-    * Review repository file structures in [Project Structure](../learn/projects/).
-    * Explore runtime output summaries in [Running the Tool](../learn/running-mtt/).
+    * Review repository file structures in [Project Structure](../learn/projects/index.md).
+    * Explore runtime output summaries in [Running the Tool](../learn/running-mtt/index.md).

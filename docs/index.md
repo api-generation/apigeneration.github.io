@@ -1,99 +1,115 @@
-# Learn About MTT
+# Model Transform Tools (MTT)
 
 > *"A picture paints a thousand words."*  
 > — Fred R. Barnard
 
-Learn how to use **Model Transform Tools (MTT)** to generate API specifications, message schemas, and documentation from pictorial representations of your business information.
+Exposing APIs for your business services offers significant benefits, but designing them by hand is slow, repetitive, and error-prone[cite: 4]. **Model Transform Tools (MTT)** solves these problems by generating deterministic API specifications, schema definitions, and static documentation directly from graphical domain models[cite: 4].
 
 ---
 
-## Getting Started
+## 🎙️ NotebookLM Deep-Dive Audio Overview
+
+Listen to an AI-generated technical podcast overview of the **Model Transform Tools** platform, architecture, and generation capabilities:
+
+!!! info "MTT Architecture & Overview Podcast"
+
+    <audio controls style="width: 100%; margin-top: 8px; border-radius: 8px;">
+      <source src="assets/podcast.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    *Automatically generated via NotebookLM & GitHub Actions from current site documentation.*
+
+---
+
+## Why Use MTT?
 
 <div class="grid cards" markdown>
 
--   :material-information-outline:{ .lg .middle } **MTT Overview**
+-   **Define Once, Generate Many**
 
     ---
 
-    Understand the core architecture, transformation engine concepts, and execution pipeline.
+    Generate **OpenAPI**, **GraphQL**, **Protobuf**, **Markdown**, and custom data standards from a single output-agnostic model[cite: 4].
 
-    [:octicons-arrow-right-24: Read Overview](learn/mtt-overview/)
-
--   :material-folder-outline:{ .lg .middle } **Project Structure**
+-   **Improve Efficiency**
 
     ---
 
-    Explore repository layout, configuration files, and source control organization.
+    Reduce development costs significantly[cite: 4]. For example: The `Library` sample project automatically generates over **7,500 lines** of OpenAPI and **450+ lines** of GraphQL[cite: 4].
 
-    [:octicons-arrow-right-24: Explore Layout](learn/projects/)
-
--   :material-play-circle-outline:{ .lg .middle } **Running the Tool**
+-   **Incorporate Best Practice**
 
     ---
 
-    Execute transformations locally, via command line, or inside automated GitHub Actions.
+    Implement local standards and enterprise rules once in the transform engine, resulting in architectural rigor and consistency across all generated artifacts[cite: 4].
 
-    [:octicons-arrow-right-24: View Guide](learn/running-mtt/)
-
--   :material-auto-fix:{ .lg .middle } **Example Projects**
+-   **Democratise Development**
 
     ---
 
-    Browse live sample models and their generated OpenAPI specs, GraphQL schemas, and docs.
+    Standard UML diagrams allow business analysts, enterprise architects, and domain experts to participate in model reviews before writing server code[cite: 4].
 
-    [:octicons-arrow-right-24: Browse Examples](learn/example-projects/)
+-   **Technology Independence**
+
+    ---
+
+    Generate implementation-agnostic specifications rather than locked-in framework code, giving engineering teams total freedom to choose target languages[cite: 4].
 
 </div>
 
 ---
 
-## Technical References
+## Key Documentation & Walkthroughs
 
 <div class="grid cards" markdown>
 
--   :material-cube-outline:{ .md .middle } **UML & Models**
+-   **MTT Overview**
 
-    Guidelines for modeling domain entities, attributes, and relationships.
+    ---
 
-    [View Specs →](learn/models/)
+    Learn about the core transformation engine, intermediate model layer, and supported specifications[cite: 5].
 
--   :material-file-import-outline:{ .md .middle } **Model Loaders**
+    [:octicons-arrow-right-24: Read Overview](learn/mtt-overview/index.md)
 
-    How graphical diagrams are ingested and parsed into internal metadata.
+-   **Project Structure**
 
-    [View Loaders →](learn/loaders/)
+    ---
 
--   :material-cog-outline:{ .md .middle } **Generators**
+    Explore repository layouts, configuration files (`mtt-config.yaml`), and output directory structures[cite: 5].
 
-    Standards for generating OpenAPI 3.0, GraphQL, Protobuf, and Markdown outputs.
+    [:octicons-arrow-right-24: View Project Structure](learn/projects/index.md)
 
-    [View Generators →](learn/standard-generators/)
+-   **Running the Tool**
+
+    ---
+
+    Step-by-step instructions for running MTT locally via Docker or in the cloud using the MTT GitHub App[cite: 5, 6].
+
+    [:octicons-arrow-right-24: Learn How to Run](learn/running-mtt/index.md)
+
+-   **Example Projects**
+
+    ---
+
+    Browse sample models (`Library`, `Property Ownership`, `Personal Details`, `Core Types`) and generated outputs[cite: 5].
+
+    [:octicons-arrow-right-24: Browse Examples](learn/example-projects/index.md)
 
 </div>
 
 ---
 
-## Frequently Asked Questions
+## Get Started
 
-??? question "Why can't I just use Generative AI to design my APIs?"
+<div class="grid cards" markdown>
 
-    While Generative AI can assist in drafting initial snippets, enterprise API generation requires **100% deterministic precision, strict governance, and repeatable standards**.
+-   **New to MTT?**
 
-    * **Zero Hallucinations:** Generative models can introduce subtle field mismatches or non-standard syntax. MTT guarantees exact schema compliance every time.
-    * **Single Source of Truth:** Updating a core visual model automatically propagates breaking changes cleanly across OpenAPI, GraphQL, Protobuf, and documentation.
-    * **Governance & Compliance:** Architectural rules are built directly into MTT generators rather than relying on prompt engineering.
+    ---
 
-??? question "How does MTT integrate with existing GitHub repositories?"
+    Explore our step-by-step walkthrough to see how model transformations convert graphical UML diagrams into production-ready API specifications[cite: 4].
 
-    MTT uses standard repository structures for models and configs. You can execute transformations on local file stores or automate artifact generation directly within GitHub Actions pipelines.
+    [:octicons-rocket-24: Try out MTT](try-mtt/index.md){ .md-button .md-button--primary }
 
-[:octicons-question-24: View Full FAQ Page](faq/){ .md-button }
-
----
-
----
-
-!!! tip "Ready to run a transformation?"
-    Return to the main MTT Manager web application to select your local or remote project and execute transforms.
-
-    [Launch MTT Tool →](https://apigeneration.tech/try-mtt){ .md-button .md-button--primary }
+</div>

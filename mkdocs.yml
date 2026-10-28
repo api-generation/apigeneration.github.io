@@ -7,17 +7,23 @@ theme:
   logo: assets/logo.png
   favicon: assets/favicon.png
   palette:
-    # Light Mode (Matches MTT Manager app background)
+    # 1. Light Mode (Default)
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: white
       accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
 
-    # Dark Mode
+    # 2. Dark Mode (Slate)
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: grey
+      primary: black
       accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
   features:
     - navigation.tabs          # Top horizontal navbar

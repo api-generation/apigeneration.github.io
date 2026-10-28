@@ -10,6 +10,62 @@
   --mtt-radius: 12px;
 }
 
+/* ==========================================================================
+   Dark Mode Aesthetic Overrides (Slate Theme Matching MTT Manager)
+   ========================================================================== */
+
+[data-md-color-scheme="slate"] {
+  /* Brand color variables for Dark Mode */
+  --md-default-bg-color: #0f172a;        /* Sleek Slate 900 background */
+  --md-default-fg-color: #f8fafc;        /* High-contrast crisp body text */
+  --mtt-border: #334155;                 /* Soft slate border (#334155) */
+  --mtt-card-bg: #1e293b;                /* Deep slate card surface (#1e293b) */
+}
+
+/* 1. Header Navbar in Dark Mode */
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-bottom: 1px solid var(--mtt-border);
+}
+
+[data-md-color-scheme="slate"] .md-header__title,
+[data-md-color-scheme="slate"] .md-header__button,
+[data-md-color-scheme="slate"] .md-nav__link {
+  color: #f8fafc !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: #0f172a !important;
+  border-bottom: 1px solid var(--mtt-border);
+}
+
+/* 2. Dark Mode Grid Cards */
+[data-md-color-scheme="slate"] .grid.cards > ul > li {
+  background: var(--mtt-card-bg) !important;
+  border: 1px solid var(--mtt-border) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-md-color-scheme="slate"] .grid.cards > ul > li:hover {
+  border-color: #64748b !important;
+  transform: translateY(-2px);
+}
+
+/* 3. Sidebar Active Pill Highlight in Dark Mode */
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link--active {
+  color: #60a5fa !important;             /* Lighter blue text for dark background */
+  background-color: rgba(59, 130, 246, 0.15) !important;
+  border-left: 3px solid #60a5fa !important;
+}
+
+/* 4. Admonitions & Code Blocks in Dark Mode */
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+  background-color: var(--mtt-card-bg) !important;
+  border-color: var(--mtt-border) !important;
+}
+
 /* --------------------------------------------------------------------------
    1. Header Navbar & Navigation Tabs
    -------------------------------------------------------------------------- */

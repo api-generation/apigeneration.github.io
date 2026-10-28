@@ -83,4 +83,4 @@ The **Learn** portal provides complete documentation, architectural blueprints, 
 
 !!! tip "Next Steps"
     * Check repository layout guidelines in [Project Structure](../projects/).
-    * Learn how to extend target outputs in [Developing New Generators](../new-generators/).
+    * Learn how to extend target outputs in [Developing New Generators](../new-generators/index.md).

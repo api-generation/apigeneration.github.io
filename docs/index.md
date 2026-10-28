@@ -3,7 +3,7 @@
 > *"A picture paints a thousand words."*  
 > — Fred R. Barnard
 
-Exposing APIs for your business services offers significant benefits, but designing them by hand is slow, repetitive, and error-prone[cite: 4]. **Model Transform Tools (MTT)** solves these problems by generating deterministic API specifications, schema definitions, and static documentation directly from graphical domain models[cite: 4].
+Exposing APIs for your business services offers significant benefits, but designing them by hand is slow, repetitive, and error-prone. **Model Transform Tools (MTT)** solves these problems by generating deterministic API specifications, schema definitions, and static documentation directly from graphical domain models.
 
 ---
 
@@ -30,31 +30,31 @@ Listen to an AI-generated technical podcast overview of the **Model Transform To
 
     ---
 
-    Generate **OpenAPI**, **GraphQL**, **Protobuf**, **Markdown**, and custom data standards from a single output-agnostic model[cite: 4].
+    Generate **OpenAPI**, **GraphQL**, **Protobuf**, **Markdown**, and custom data standards from a single output-agnostic model.
 
 -   **Improve Efficiency**
 
     ---
 
-    Reduce development costs significantly[cite: 4]. For example: The `Library` sample project automatically generates over **7,500 lines** of OpenAPI and **450+ lines** of GraphQL[cite: 4].
+    Reduce development costs significantly. For example: The `Library` sample project automatically generates over **7,500 lines** of OpenAPI and **450+ lines** of GraphQL.
 
 -   **Incorporate Best Practice**
 
     ---
 
-    Implement local standards and enterprise rules once in the transform engine, resulting in architectural rigor and consistency across all generated artifacts[cite: 4].
+    Implement local standards and enterprise rules once in the transform engine, resulting in architectural rigor and consistency across all generated artifacts.
 
 -   **Democratise Development**
 
     ---
 
-    Standard UML diagrams allow business analysts, enterprise architects, and domain experts to participate in model reviews before writing server code[cite: 4].
+    Standard UML diagrams allow business analysts, enterprise architects, and domain experts to participate in model reviews before writing server code.
 
 -   **Technology Independence**
 
     ---
 
-    Generate implementation-agnostic specifications rather than locked-in framework code, giving engineering teams total freedom to choose target languages[cite: 4].
+    Generate implementation-agnostic specifications rather than locked-in framework code, giving engineering teams total freedom to choose target languages.
 
 </div>
 
@@ -68,7 +68,7 @@ Listen to an AI-generated technical podcast overview of the **Model Transform To
 
     ---
 
-    Learn about the core transformation engine, intermediate model layer, and supported specifications[cite: 5].
+    Learn about the core transformation engine, intermediate model layer, and supported specifications.
 
     [:octicons-arrow-right-24: Read Overview](learn/mtt-overview/index.md)
 
@@ -76,7 +76,7 @@ Listen to an AI-generated technical podcast overview of the **Model Transform To
 
     ---
 
-    Explore repository layouts, configuration files (`mtt-config.yaml`), and output directory structures[cite: 5].
+    Explore repository layouts, configuration files (`mtt-config.yaml`), and output directory structures.
 
     [:octicons-arrow-right-24: View Project Structure](learn/projects/index.md)
 
@@ -84,7 +84,7 @@ Listen to an AI-generated technical podcast overview of the **Model Transform To
 
     ---
 
-    Step-by-step instructions for running MTT locally via Docker or in the cloud using the MTT GitHub App[cite: 5, 6].
+    Step-by-step instructions for running MTT locally via Docker or in the cloud using the MTT GitHub App.
 
     [:octicons-arrow-right-24: Learn How to Run](learn/running-mtt/index.md)
 
@@ -92,7 +92,7 @@ Listen to an AI-generated technical podcast overview of the **Model Transform To
 
     ---
 
-    Browse sample models (`Library`, `Property Ownership`, `Personal Details`, `Core Types`) and generated outputs[cite: 5].
+    Browse sample models (`Library`, `Property Ownership`, `Personal Details`, `Core Types`) and generated outputs.
 
     [:octicons-arrow-right-24: Browse Examples](learn/example-projects/index.md)
 
@@ -108,7 +108,7 @@ Listen to an AI-generated technical podcast overview of the **Model Transform To
 
     ---
 
-    Explore our step-by-step walkthrough to see how model transformations convert graphical UML diagrams into production-ready API specifications[cite: 4].
+    Explore our step-by-step walkthrough to see how model transformations convert graphical UML diagrams into production-ready API specifications.
 
     [:octicons-rocket-24: Try out MTT](try-mtt/index.md){ .md-button .md-button--primary }
 

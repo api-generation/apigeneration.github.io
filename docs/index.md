@@ -14,7 +14,7 @@ Listen to an AI-generated technical podcast overview of the **Model Transform To
 !!! info "MTT Architecture & Overview Podcast"
 
     <audio controls style="width: 100%; margin-top: 8px; border-radius: 8px;">
-      <source src="assets/podcast.mp3" type="audio/mpeg">
+      <source src="assets/mtt-podcast.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 

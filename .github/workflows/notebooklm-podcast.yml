@@ -33,7 +33,7 @@ jobs:
         run: |
           echo "Syncing documentation updates to NotebookLM knowledge base..."
           # Python script interacts with NotebookLM sources to refresh content
-          python .github/scripts/update_podcast.py
+          python scripts/update_podcast.py
 
       - name: Commit Updated Audio Asset
         run: |

@@ -39,6 +39,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
-          git add docs/assets/podcast.mp3
+          git add docs/assets/mtt-podcast.mp3
           git diff-index --quiet HEAD || git commit -m "chore(podcast): update NotebookLM audio overview podcast [skip ci]"
           git push
